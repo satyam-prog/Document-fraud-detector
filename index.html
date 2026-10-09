@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Forgery Detection</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕵️</text></svg>" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Navigation</h2>
+        <nav>
+          <a href="#upload">Upload &amp; Inspect</a>
+          <a href="#results">Forensic Results</a>
+        </nav>
+        <hr />
+        <p class="caption">Forged document investigation pipeline</p>
+        <p>Inspect suspicious files for visual anomalies, metadata inconsistencies, and document manipulation traces.</p>
+        <p class="caption privacy">Files are analyzed in your browser. Only the SHA-256 fingerprint is sent to the server for verification.</p>
+      </aside>
+
+      <main class="content">
+        <h1>Document Forgery Detection</h1>
+        <p class="caption">Analyze uploaded PDFs, JPGs, and PNGs for suspicious characteristics.</p>
+
+        <section id="upload">
+          <label class="dropzone" id="dropzone">
+            <input type="file" id="file-input" accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" />
+            <span class="dropzone-title">Upload a document for inspection</span>
+            <span class="caption">Drag &amp; drop or click to browse · Supported formats: PDF, JPG, PNG</span>
+          </label>
+        </section>
+
+        <section id="results"></section>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
